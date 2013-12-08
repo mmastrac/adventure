@@ -131,7 +131,10 @@ html {
 .monitor-label {
 	position: absolute;
 	top: 784px;
-	z-index: +1;
+	z-index: +2;
+	background-image: url(../img/tape2.png);
+	width: 400px;
+	height: 88px;
 }
 
 .monitor-texture {

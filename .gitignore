@@ -1,6 +1,9 @@
 com.grack.adventure.logic/target
 com.grack.adventure.web/target
+com.grack.adventure.web/war/WEB-INF/deploy
+com.grack.adventure.web/war/adventure
 .DS_Store
 .classpath
 .project
 .settings
+gwt-unitCache
