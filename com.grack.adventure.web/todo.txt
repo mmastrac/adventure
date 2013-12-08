@@ -1,0 +1,5 @@
+- Allow multiple save slots
+- Notes
+- Up/down arrow for history
+- Auto-save game in progress
+- Refresh screen all-at-once to avoid iPad tearing

@@ -1,0 +1,195 @@
+* {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+html {
+	font-family: 'Droid Sans Mono', monospace;
+	font-size: 18px;
+	line-height: 25px;
+	background-color: black;
+}
+
+.monitor {
+	width: 1024px;
+	height: 768px;
+	position: relative;
+}
+
+.monitor-outer-frame {
+	width: 1024px;
+	height: 768px;
+	border-radius: 30px;
+	border-top: 2px solid white;
+	border-bottom: 3px solid #999;
+	padding: 50px;
+	background: #c9c9b9; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #c9c9b9 0%, #c9c6b7 51%, #b6b4a5 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #c9c9b9),
+		color-stop(51%, #c9c6b7), color-stop(100%, #b6b4a5) );
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg, #c9c9b9 0%, #c9c6b7 51%, #b6b4a5 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg, #c9c9b9 0%, #c9c6b7 51%, #b6b4a5 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg, #c9c9b9 0%, #c9c6b7 51%, #b6b4a5 100%);
+	/* IE10+ */
+	background: linear-gradient(-45deg, #c9c9b9 0%, #c9c6b7 51%, #b6b4a5 100%);
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(        startColorstr='#c9c9b9',
+		endColorstr='#b6b4a5', GradientType=1 );
+	padding: 50px;
+}
+
+.monitor-inner-bezel {
+	width: 960px;
+	height: 680px;
+	position: relative;
+	border-radius: 30px;
+	padding: 30px;
+	border: 1px solid #aaa;
+	background: #7f7a64; /* Old browsers */
+	background: -moz-linear-gradient(top, #7f7a64 0%, #c8c8b8 8%, #cfceba 93%, #f9fbf0
+		100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7f7a64),
+		color-stop(8%, #c8c8b8), color-stop(93%, #cfceba),
+		color-stop(100%, #f9fbf0) ); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #7f7a64 0%, #c8c8b8 8%, #cfceba 93%,
+		#f9fbf0 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #7f7a64 0%, #c8c8b8 8%, #cfceba 93%, #f9fbf0
+		100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #7f7a64 0%, #c8c8b8 8%, #cfceba 93%, #f9fbf0
+		100%); /* IE10+ */
+	background: linear-gradient(top, #7f7a64 0%, #c8c8b8 8%, #cfceba 93%, #f9fbf0 100%);
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(     startColorstr='#7f7a64',
+		endColorstr='#f9fbf0', GradientType=0 ); /* IE6-9 */
+}
+
+.monitor-power-light {
+	position: absolute;
+	width: 25px;
+	height: 9px;
+	background-color: green;
+	top: 769px;
+	left: 952px;
+	border: 2px solid #585;
+	border-left-color: #585;
+	border-right-color: #373;
+	border-bottom-color: #373;
+	border-radius: 2px;
+	background: #c9de96; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, #c9de96 0%, #8ab66b 88%,
+		#398235 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%,
+		color-stop(0%, #c9de96), color-stop(88%, #8ab66b),
+		color-stop(100%, #398235) ); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover, #c9de96 0%, #8ab66b 88%,
+		#398235 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover, #c9de96 0%, #8ab66b 88%,
+		#398235 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover, #c9de96 0%, #8ab66b 88%,
+		#398235 100%); /* IE10+ */
+	background: radial-gradient(center, ellipse cover, #c9de96 0%, #8ab66b 88%, #398235
+		100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(   startColorstr='#c9de96',
+		endColorstr='#398235', GradientType=1 );
+	/* IE6-9 fallback on horizontal gradient */
+}
+
+.monitor-screen {
+	position: absolute;
+	width: 960px;
+	height: 680px;
+	top: 30px;
+	left: 30px;
+	border-radius: 25px;
+	z-index: +1;
+	background-color: #3f4046;
+}
+
+.monitor-display {
+	top: 30px;
+	left: 30px;
+	background-color: transparent;
+	color: white;
+	width: 920px;
+	height: 640px;
+	padding: 20px;
+	border-radius: 10px;
+	color: white;
+	position: absolute;
+	z-index: +1;
+}
+
+.blink .monitor-display .hilite {
+	background-color: white;
+	color: black;
+}
+
+.monitor-label {
+	position: absolute;
+	top: 784px;
+	z-index: +1;
+}
+
+.monitor-texture {
+	position: absolute;
+	background-image: url(../img/mottle.png);
+	opacity: 0.2;
+	width: 1125px;
+	height: 874px;
+	border-radius: 30px;
+	top: 0px;
+	left: 0px;
+	z-index: +1;
+}
+
+#output {
+	width: 100%;
+	height: 626px;
+	outline: none;
+	border: none;
+	resize: none;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	background-color: transparent;
+	color: white;
+	white-space: pre;
+}
+
+#input {
+	position: absolute;
+	border: 0px;
+	outline: none;
+	color: white;
+	padding: 0;
+	margin: 0;
+	background-color: transparent;
+	z-index: +1;
+	top: 640px !important;
+	height: 100px !important;
+	left: -1000px !important;
+	right: 0px !important;
+}
+
+.header {
+	background-color: white;
+	color: black;
+}
+
+.header .score {
+	float: right;
+}
+
+#input-catcher {
+	position: absolute;
+	left: -1000px;
+	top: -1000px;
+	width: 2000px;
+	height: 2000px;
+	z-index: +2;
+	opacity: 0;
+}

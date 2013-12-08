@@ -1,0 +1,61 @@
+* Required for compatibility with original FORTRAN version
+VERB EXPLORE,SAY
+VARIABLE HERE,THERE,STATUS,ARG1,ARG2
+DEFINE HERE,THERE,STATUS,ARG1,ARG2
+TEXT     SOK!
+TEXT     BLANK
+
+TEXT     OK!
+         Ok.
+
+* Tests IF statements (chaining)
+VARIABLE X
+
+TEXT   PASS
+       Pass! #
+TEXT   FAIL
+       Fail!
+
+VERB NORTH,N
+VERB SOUTH,S
+
+PLACE BLAH
+    Blah place
+   %Blah
+
+PLACE BLAH2
+    Blah place
+   %Blah
+
+LABEL SAY.PASS
+    VALUE PASS, 1
+
+AT BLAH
+    MOVE SOUTH, BLAH2
+    VALUE PASS, 4
+    MOVE NORTH, BLAH2
+    SAY FAIL
+
+AT BLAH2
+    VALUE PASS, 3
+
+INITIAL
+    GOTO BLAH
+    SET X, 0
+    CALL SAY.PASS
+    IFEQ X, 1
+        SAY FAIL
+    FIN
+    VALUE PASS, 2
+    INPUT
+    CALL BLAH2
+    CALL BLAH
+    IFEQ X, 1
+        SAY FAIL
+    FIN
+    SAY FAIL
+    QUIT
+    
+REPEAT
+    VALUE PASS, 5
+    STOP   

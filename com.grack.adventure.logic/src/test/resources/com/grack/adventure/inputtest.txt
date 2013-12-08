@@ -1,0 +1,191 @@
+>hi
+STATUS is:
+1
+verb
+ARG1 is:
+hi
+verb
+Yo!
+Hi!
+Hi 2!
+---
+>bye
+STATUS is:
+1
+verb
+ARG1 is:
+bye
+verb
+Bye!
+---
+>hi road
+STATUS is:
+2
+verb
+ARG1 is:
+hi
+verb
+ARG2 is:
+road
+place
+Yo!
+Hi!
+Hi 2!
+Hi Road!
+At road
+---
+>road
+STATUS is:
+1
+place
+ARG1 is:
+road
+place
+At road
+---
+>road hi
+STATUS is:
+2
+verb
+ARG1 is:
+hi
+verb
+ARG2 is:
+road
+place
+Yo!
+Hi!
+Hi 2!
+Hi Road!
+At road
+---
+>hi helmet
+STATUS is:
+2
+verb
+ARG1 is:
+hi
+verb
+ARG2 is:
+helmet
+object
+Yo!
+Hi!
+Hi 2!
+---
+>hi hardhat
+STATUS is:
+2
+verb
+ARG1 is:
+hi
+verb
+ARG2 is:
+hardhat
+object
+Yo!
+Hi!
+Hi 2!
+---
+>helmet hi
+STATUS is:
+2
+verb
+ARG1 is:
+hi
+verb
+ARG2 is:
+helmet
+object
+Yo!
+Hi!
+Hi 2!
+---
+>hardhat hi
+STATUS is:
+2
+verb
+ARG1 is:
+hi
+verb
+ARG2 is:
+hardhat
+object
+Yo!
+Hi!
+Hi 2!
+---
+>
+STATUS is:
+0
+ARG1 is:
+
+Bad word
+Bad word
+---
+> hi foo
+STATUS is:
+2
+verb
+ARG1 is:
+hi
+verb
+ARG2 is:
+foo
+Bad word
+Yo!
+Hi!
+Hi 2!
+---
+> foo hi
+STATUS is:
+1
+ARG1 is:
+foo
+Bad word
+Bad word
+---
+>yo
+STATUS is:
+1
+verb
+ARG1 is:
+yo
+verb
+Yo!
+Hi!
+Hi 2!
+---
+>yo hi
+STATUS is:
+2
+verb
+ARG1 is:
+yo
+verb
+ARG2 is:
+hi
+verb
+Yo!
+Hi!
+Hi 2!
+Yo!
+Hi!
+Hi 2!
+---
+>yo yo
+STATUS is:
+2
+verb
+ARG1 is:
+yo
+verb
+ARG2 is:
+yo
+verb
+Yo!
+Hi!
+Hi 2!
+Yo!
+Hi!
+Hi 2!

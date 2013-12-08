@@ -1,0 +1,84 @@
+* Required for compatibility with original FORTRAN version
+VERB EXPLORE,SAY
+VARIABLE HERE,THERE,STATUS,ARG1,ARG2
+DEFINE HERE,THERE,STATUS,ARG1,ARG2
+TEXT     SOK!
+TEXT     BLANK
+
+TEXT     OK!
+         Ok.
+SYNON    0,MOVED        {set by interpreter if we moved during}
+SYNON    1,QUICKIE     {BRIEF output mode in effect}
+SYNON    2,FASTMODE    {FAST output mode in effect}
+SYNON    3,FULLDISP    {Display full place description}
+SYNON    4,PLS.CLARIFY  {Unsure what you intend, please clarify. }
+SYNON    5,JUGGLED	{set by interpreter if we picked up, }
+
+SYNON    0,LIT         {Place is self-illuminated}
+SYNON    1,BEENHERE    {We've been here at least once}
+
+* Test starts here
+VARIABLE X
+TEXT   OBJECT.IS
+       Output: #
+TEXT   SAY!
+       Say:
+TEXT   NAME!
+       Name:
+TEXT   VALUE!
+       Value:
+
+PLACE     ROAD
+          You're at end of road again.
+         %You are standing at the end of a road before a small brick building.
+          Around you is a forest.  A small stream flows out of the building and
+          down a gully.
+         %You are standing at the end of a road before a small brick building.
+          Around you is a forest.  A small stream flows out of the building and
+          down a gully.
+PLACE     FOREST
+          You're in forest.
+         %You are in open forest, with a deep valley to one side.
+OBJECT   HELMET.FOO
+         Helmet description [(state 1)/(state 0/2)]
+        %State 0
+        %State 1
+        %State 2
+OBJECT   TURTLE
+         Turtle
+        %Yes, it's a turtle
+OBJECT   DJINN
+       {Djinn}
+	%There is a twelve-foot djinn standing in the center of the pentagram,
+         glowering at you.
+OBJECT    MESSAGE
+         {Message in second maze}
+         %There is a message scrawled in the dust in a flowery script, reading:
+          "This is not the maze where the pirate leaves his treasure chest."
+
+INITIAL
+    VALUE OBJECT.IS, @HELMET.FOO
+    VALUE OBJECT.IS, @HELMET.FOO-1
+    VALUE OBJECT.IS, @TURTLE
+    VALUE OBJECT.IS, @FOREST
+    VALUE OBJECT.IS, @SAY!
+    VALUE OBJECT.IS, @ROAD
+    SET X, DJINN-TURTLE
+    VALUE OBJECT.IS, X
+    VALUE OBJECT.IS, DJINN-TURTLE
+    VALUE OBJECT.IS, DJINN-TURTLE+1
+    VALUE OBJECT.IS, 2+DJINN-TURTLE+1
+    VALUE OBJECT.IS, TURTLE-MESSAGE+50
+    SET X, -2+4
+    VALUE OBJECT.IS, X
+    SET X, -2+4+-1
+    VALUE OBJECT.IS, X
+    SET X, -2+4--1
+    VALUE OBJECT.IS, X
+    SET X, -1
+    ADD X, 3
+    VALUE OBJECT.IS, X
+    SAY DJINN+1
+    SAY DJINN-1
+    SAY HELMET.FOO+@DJINN
+    STOP

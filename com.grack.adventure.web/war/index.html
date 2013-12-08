@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width = 1140, user-scalable = no" />
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<title>Colossal Cave Adventure</title>
+<script src="adventure/adventure.nocache.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>if (!window.jQuery) document.write('<script src="jquery.min.js"></scr' + 'ipt/>')</script>
+<script src="js/jquery-caret.js"></script>
+<script src="js/script.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<textarea id="input-catcher"></textarea>
+	<div class="monitor">
+		<div class="monitor-outer-frame">
+			<img class="monitor-label" src="img/tape2.png">
+			<div class="monitor-texture"></div>
+			<div class="monitor-inner-bezel">
+				<img class="monitor-screen" src="img/monitor.png">
+				<div class="monitor-power-light"></div>
+				<div class="monitor-display">
+					<noscript>
+						<div
+							style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+							Your web browser must have JavaScript enabled in order for this
+							application to display correctly.</div>
+					</noscript>
+					<div class="header">
+						&nbsp;Colossal Cave Adventure&nbsp;<span id="score" class="score" style="display: none;">Score:
+							<span id="score_current">0</span> of <span id="score_total">0</span>&nbsp;
+						</span>
+					</div>
+					<div id="output">
+Loading...
+	</div>
+					<input id="input" type="text" autocapitalize="off" tabindex="0"></input>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,165 @@
+* Required for compatibility with original FORTRAN version
+VERB EXPLORE,SAY
+VARIABLE HERE,THERE,STATUS,ARG1,ARG2
+DEFINE HERE,THERE,STATUS,ARG1,ARG2
+TEXT     SOK!
+TEXT     BLANK
+
+TEXT     OK!
+         Ok.
+SYNON    0,MOVED        {set by interpreter if we moved during}
+SYNON    1,QUICKIE     {BRIEF output mode in effect}
+SYNON    2,FASTMODE    {FAST output mode in effect}
+SYNON    3,FULLDISP    {Display full place description}
+SYNON    4,PLS.CLARIFY  {Unsure what you intend, please clarify. }
+SYNON    5,JUGGLED      {set by interpreter if we picked up, }
+
+SYNON    0,LIT         {Place is self-illuminated}
+SYNON    1,BEENHERE    {We've been here at least once}
+
+SYNON DJINN,GENIE,LAMPGUY
+
+* Test starts here
+VARIABLE X
+VERB HI, YO
+TEXT   OBJECT.IS
+       Output: #
+TEXT   SAY!
+       Say:
+TEXT   NAME!
+       Name:
+TEXT   VALUE!
+       Value:
+TEXT   PLURAL
+       Value is [one/#]
+TEXT   NO.LINEFEED
+       !`No linefeed:
+TEXT   LEAD.WS.1
+       !@ leading whitespace
+TEXT   LEAD.WS.2
+       / leading whitespace
+TEXT   TRAIL.WS.1
+       trailing whitespace
+
+PLACE     ROAD
+          You're at end of road again.
+         %You are standing at the end of a road before a small brick building.
+          Around you is a forest.  A small stream flows out of the building and
+          down a gully.
+PLACE     FOREST
+          You're in forest.
+         %You are in open forest, with a deep valley to one side.
+OBJECT   HELMET.FOO
+         Helmet description [(state 1)/(state 0/2)]
+        %State 0
+        %State 1
+OBJECT   DJINN
+       {Djinn}
+        %There is a twelve-foot djinn standing in the center of the pentagram,
+         glowering at you.
+OBJECT   TURTLE
+        {Turtle}
+        %Darwin the tortoise is swimming in the reservoir nearby.
+OBJECT    MESSAGE
+         {Message in second maze}
+         %There is a message scrawled in the dust in a flowery script, reading:
+          "This is not the maze where the pirate leaves his treasure chest."
+INITIAL
+    GOTO FOREST
+
+    NAME OBJECT.IS, HI
+    NAME OBJECT.IS, YO
+    
+    SET X, 10
+    ADD X, HELMET.FOO
+    VALUE OBJECT.IS, X
+    VALUE OBJECT.IS, 100
+
+    RANDOM X, HELMET.FOO
+    VALUE OBJECT.IS, X
+*    This outputs the entity ID
+    VALUE OBJECT.IS, 999
+    
+    VALUE OBJECT.IS, HELMET.FOO
+    SET HELMET.FOO, -1
+    VALUE OBJECT.IS, HELMET.FOO
+    SET HELMET.FOO, 0
+    SAY SAY!
+    SAY HELMET.FOO
+    SAY NAME!
+    NAME OBJECT.IS, HELMET.FOO
+    SAY VALUE!
+    VALUE OBJECT.IS, HELMET.FOO
+    
+    SET HELMET.FOO, 1
+    SAY SAY!
+    SAY HELMET.FOO
+    SAY NAME!
+    NAME OBJECT.IS, HELMET.FOO
+    SAY VALUE!
+    VALUE OBJECT.IS, HELMET.FOO
+
+    SET HELMET.FOO, 2
+    SAY SAY!
+    SAY HELMET.FOO
+    SAY NAME!
+    NAME OBJECT.IS, HELMET.FOO
+    SAY VALUE!
+    VALUE OBJECT.IS, HELMET.FOO
+
+    GET HELMET.FOO
+
+    SET HELMET.FOO, 0
+    SAY SAY!
+    SAY HELMET.FOO
+    SAY NAME!
+    NAME OBJECT.IS, HELMET.FOO
+    SAY VALUE!
+    VALUE OBJECT.IS, HELMET.FOO
+
+    SET HELMET.FOO, 1
+    SAY SAY!
+    SAY HELMET.FOO
+    SAY NAME!
+    NAME OBJECT.IS, HELMET.FOO
+    SAY VALUE!
+    VALUE OBJECT.IS, HELMET.FOO
+
+    SET HELMET.FOO, 2
+    SAY SAY!
+    SAY HELMET.FOO
+    SAY NAME!
+    NAME OBJECT.IS, HELMET.FOO
+    SAY VALUE!
+    VALUE OBJECT.IS, HELMET.FOO
+
+    SET X, 0
+    VALUE PLURAL, X
+    SET X, 1
+    VALUE PLURAL, X
+    SET X, 2
+    VALUE PLURAL, X
+    
+    SAY DJINN
+    SAY GENIE
+    GET DJINN
+    SAY DJINN
+    
+    SAY FOREST
+    BIS STATUS, QUICKIE
+    SAY FOREST
+    BIS FOREST, BEENHERE
+    SAY FOREST
+    BIC FOREST, BEENHERE
+    SAY FOREST
+    BIC STATUS, QUICKIE
+    SAY FOREST
+    BIS STATUS, FASTMODE
+    SAY FOREST
+    
+    SAY TRAIL.WS.1
+    SAY NO.LINEFEED
+    SAY LEAD.WS.1
+    SAY NO.LINEFEED
+    SAY LEAD.WS.2
+    STOP

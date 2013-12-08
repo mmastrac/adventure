@@ -1,0 +1,93 @@
+* Required for compatibility with original FORTRAN version
+VERB EXPLORE,VALUE,SAY
+VARIABLE HERE,THERE,STATUS,ARG1,ARG2
+DEFINE HERE,THERE,STATUS,ARG1,ARG2
+TEXT     SOK!
+TEXT     BLANK
+
+TEXT     OK!
+         Ok.
+
+* Tests IF statements (conditional pass and fail)
+VARIABLE X
+
+TEXT   PASS
+       Pass! #
+TEXT   FAIL
+       Fail! #
+
+INITIAL
+    SET X, 1
+ 
+    IFLT X, 0
+        IFGT X, 0
+            VALUE FAIL, 0
+        ELSE
+            VALUE FAIL, 1
+        FIN
+    ELSE
+        VALUE PASS, 0
+    FIN
+    
+    IFLT X, 0
+        IFGT X, 0
+            VALUE FAIL, 0
+        ELSE
+            VALUE FAIL, 1
+        FIN
+    FIN
+    
+    IFGT X, 0
+        VALUE PASS, 2
+    ELSE
+        VALUE FAIL, 3
+    FIN
+
+    IFLT X, 0
+        VALUE FAIL, 4
+    ELSE
+        VALUE PASS, 5
+    FIN
+
+    IFEQ X, 1
+        VALUE PASS, 6
+    ELSE
+        VALUE FAIL, 7
+    FIN
+    
+    NOT
+    IFEQ X, 0
+        VALUE PASS, 8
+    ELSE
+        VALUE FAIL, 9
+    FIN
+    
+    NOT
+    NOT
+    IFEQ X, 1
+        VALUE PASS, 10
+    ELSE
+        VALUE FAIL, 11
+    FIN
+    
+    IFGT X, 0
+    ELSE
+        VALUE FAIL, 12
+    FIN   
+    
+    IFGT X, 0
+        VALUE PASS, 12
+    ELSE
+    FIN
+
+    IFLT X, 0
+        VALUE FAIL, 13
+    ELSE
+    FIN
+    
+    IFLT X, 0
+    ELSE
+        VALUE PASS, 13
+    FIN
+    
+    STOP

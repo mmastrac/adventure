@@ -1,0 +1,61 @@
+Output: hi
+Output: hi
+Output: 10
+Output: 100
+Output: 0
+Output: 999
+Output: 1
+Output: 0
+Say:
+State 0
+Name:
+Output: helmet.foo
+Value:
+Output: 1
+Say:
+State 1
+Name:
+Output: helmet.foo
+Value:
+Output: 2
+Say:
+Name:
+Output: helmet.foo
+Value:
+Output: 3
+Say:
+Helmet description (state 0/2)
+Name:
+Output: helmet.foo
+Value:
+Output: 1
+Say:
+Helmet description (state 1)
+Name:
+Output: helmet.foo
+Value:
+Output: 2
+Say:
+Helmet description (state 0/2)
+Name:
+Output: helmet.foo
+Value:
+Output: 3
+Value is 0
+Value is one
+Value is 2
+There is a twelve-foot djinn standing in the center of the pentagram,
+glowering at you.
+There is a twelve-foot djinn standing in the center of the pentagram,
+glowering at you.
+{Djinn}
+You are in open forest, with a deep valley to one side.
+You are in open forest, with a deep valley to one side.
+You're in forest.
+You are in open forest, with a deep valley to one side.
+You are in open forest, with a deep valley to one side.
+You're in forest.
+trailing whitespace
+
+No linefeed: leading whitespace
+No linefeed: leading whitespace

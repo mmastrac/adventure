@@ -1,0 +1,13 @@
+There is a gem-encrusted visorless helmet sitting on the floor!
+Object: helmet
+There is a large nest here, full of golden eggs!
+Object: eggs
+There are many coins here!
+Object: coins
+Count: 3
+You are standing at the end of a road before a small brick building.
+Around you is a forest.  A small stream flows out of the building and
+down a gully.
+You are in open forest, with a deep valley to one side.
+Count: 2
+Pass!

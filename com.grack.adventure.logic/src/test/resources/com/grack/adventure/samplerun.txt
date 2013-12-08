@@ -1,0 +1,333 @@
+
+Welcome to CP-6 Adventure!!   Say "NEWS" to get up-to-date
+game details as of 9/18/84.
+
+Would you like instructions?
+> no
+
+You are standing at the end of a road before a small brick building.
+Around you is a forest.  A small stream flows out of the building and
+down a gully.
+> look
+You are standing at the end of a road before a small brick building.
+Around you is a forest.  A small stream flows out of the building and
+down a gully.
+> info
+
+If you want to end your adventure early, say "QUIT".
+To suspend your adventure such that you can continue later, say
+"SUSPEND" (or "PAUSE" or "SAVE").  To re-start your game at a later
+time, start up a new adventure and after I say "You are standing...",
+you must say "RESTORE".  You can also name your game by saying
+"SUSPEND mine" (and "RESTORE mine") where "mine" is the name that
+you wish your suspended name to be known by (1-12 characters).
+To see what hours the cave is normally open, say "HOURS".
+To see how well you're doing, say "SCORE".  To get full credit for a
+treasure, you must have left it safely in the building, though you get
+partial credit just for locating it.  You lose points for getting
+killed, or for quitting, though the former costs you more.  There are
+also points based on how much (if any) of the cave you've managed to
+explore; in particular, there is a large bonus just for getting in (to
+distinguish the beginners from the rest of the pack), and there are
+other ways to determine whether you've been through some of the more
+harrowing sections.  If you think you've found all the treasures, just
+keep exploring for a while.  If nothing interesting happens, you
+haven't found them all yet.  If something interesting *does* happen,
+it means you're getting a bonus and have an opportunity to garner many
+more points in the master's section.  I may occasionally offer hints
+if you seem to be having trouble.  If I do, I'll warn you in advance
+how much it will affect your score.  To save paper, you may specify
+"BRIEF", which tells me never to repeat the full description of a
+place unless you explicitly ask me to by saying "LOOK".  If you
+are an experienced adventurer, you may wish to specify "FAST", which
+is like "BRIEF" but more so;  in "FAST" mode I will *never* under
+any circumstances give the full description of a place.  Finally, if
+you are in "BRIEF" or "FAST" modes, you may return to the normal mode
+of operation by saying "FULL".
+
+> brief
+Okay, from now on I'll only describe a place in full the first time
+you come to it.  To get the full description, say "LOOK".
+> look
+You are standing at the end of a road before a small brick building.
+Around you is a forest.  A small stream flows out of the building and
+down a gully.
+> fast
+Ok.
+> look
+You are standing at the end of a road before a small brick building.
+Around you is a forest.  A small stream flows out of the building and
+down a gully.
+> full
+Ok.
+> e
+You are inside a building, a well house for a large spring.
+
+There are some keys on the ground here.
+There is a shiny brass lamp nearby.
+There is food here.
+There is a bottle of water here.
+> inv
+You're not carrying anything.
+> get
+get what?
+> get keys
+Ok.
+> inv
+You are currently holding the following:
+Set of keys
+> get lamp
+Ok.
+> inv
+You are currently holding the following:
+Set of keys
+Brass lantern
+> look
+You are inside a building, a well house for a large spring.
+
+There is food here.
+There is a bottle of water here.
+> get food
+Ok.
+> inv
+You are currently holding the following:
+Set of keys
+Brass lantern
+Tasty food
+> look
+You are inside a building, a well house for a large spring.
+
+There is a bottle of water here.
+> get water
+You have nothing in which to carry it.
+> get bottle
+Ok.
+> inv
+You are currently holding the following:
+Set of keys
+Brass lantern
+Tasty food
+Small bottle full of water
+
+> drop keys
+Ok.
+> get
+get what?
+> inv
+You are currently holding the following:
+Brass lantern
+Tasty food
+Small bottle full of water
+
+> get keys
+Ok.
+> drop lanterns
+I don't know the word "lanterns".
+> drop lantern
+Ok.
+> look
+You are inside a building, a well house for a large spring.
+
+There is a shiny brass lamp nearby.
+> get
+get what?
+> get lamp
+Ok.
+> inv
+You are currently holding the following:
+Set of keys
+Brass lantern
+Tasty food
+Small bottle full of water
+
+> drop food
+Ok.
+> inv
+You are currently holding the following:
+Set of keys
+Brass lantern
+Small bottle full of water
+
+> look
+You are inside a building, a well house for a large spring.
+
+There is food here.
+> get
+get what?
+> get food
+Ok.
+> inv
+You are currently holding the following:
+Set of keys
+Brass lantern
+Tasty food
+Small bottle full of water
+
+> drop bottle
+Ok.
+> inv
+You are currently holding the following:
+Set of keys
+Brass lantern
+Tasty food
+> look
+You are inside a building, a well house for a large spring.
+
+There is a bottle of water here.
+> get
+Ok.
+> inv
+You are currently holding the following:
+Set of keys
+Brass lantern
+Tasty food
+Small bottle full of water
+
+> help
+
+I know of places, actions, and things.  Most of my vocabulary
+describes places and is used to move you there.  To move, try words
+like FOREST, BUILDING, DOWNSTREAM, ENTER, EAST, WEST, NORTH, SOUTH,
+UP, or DOWN.  I know about a few special objects, like a black rod
+hidden in the cave.  These objects can be manipulated using some of
+the action words that I know.  Usually you will need to give both the
+object and action words (in either order), but sometimes I can infer
+the object from the verb alone.  Some objects also imply verbs; in
+particular, "INVENTORY" implies "TAKE INVENTORY", which causes me to
+give you a list of the things you're carrying (you can say just
+"INV" instead of "INVENTORY" if you wish).  The objects have side
+effects; for instance, the rod scares the bird.  Usually people having
+trouble moving just need to try a few more words.  Usually people
+trying unsuccessfully to manipulate an object are attempting something
+beyond their (or my!) capabilities and should try a completely
+different tack.  To speed the game you can sometimes move long
+distances with a single word.  For example, "BUILDING" usually gets
+you to the building from anywhere above ground except when lost in the
+forest.  Also, note that cave passages turn a lot, and that leaving a
+room to the north does not guarantee entering the next from the south.
+Good luck!
+
+> help
+I'm afraid that I can't tell you anything more that would be useful;
+you'll have to figure out what to do on your own.
+> xyzzy
+
+There is a brilliant flash of light and a sudden fanfare of trumpets!
+When your eyes recover from the flash, you find that:
+
+It is now pitch dark.  If you proceed you will likely fall into a pit.
+> light
+Your lamp is now on.
+You are in a debris room filled with stuff washed in from the surface.
+A low wide passage with cobbles becomes plugged with mud and debris
+here, but an awkward canyon leads upward and west.  A note on the wall
+says "Magic word XYZZY".
+
+A three foot black rod with a rusty star on an end lies nearby.
+> take rod
+Ok.
+> e
+You are crawling over cobbles in a low passage. There is a dim light
+at the east end of the passage.
+
+There is a small wicker cage discarded nearby.
+> take cage
+Ok.
+> w
+You are in a debris room filled with stuff washed in from the surface.
+A low wide passage with cobbles becomes plugged with mud and debris
+here, but an awkward canyon leads upward and west.  A note on the wall
+says "Magic word XYZZY".
+> w
+You are in an awkward sloping east/west canyon.
+> w
+You are in a splendid chamber thirty feet high. The walls are frozen
+rivers of orange stone.  An awkward canyon and a good passage exit
+from east and west sides of the chamber.
+
+A cheerful little bird is sitting here singing.
+> take bird
+The bird was unafraid when you entered, but as you approach it becomes
+disturbed and you cannot catch it.
+> drop rod
+Ok.
+> take bird
+Ok.
+> take rod
+Ok.
+> look
+You are in a splendid chamber thirty feet high. The walls are frozen
+rivers of orange stone.  An awkward canyon and a good passage exit
+from east and west sides of the chamber.
+> w
+At your feet is a small pit breathing traces of white mist. An east
+passage ends here except for a small crack leading on.  Rough stone
+steps lead down the pit.
+> d
+You are at one end of a vast hall stretching forward out of sight to
+the west, filled with wisps of white mist that sway to and fro
+almost as if alive.  Rough stone steps lead up to a passage at the
+top of a dome above you.  A wide staircase runs downward into
+the darkness;  a chill wind blows up from below.  There are small
+passages to the north and south, and a small crack leads east.
+> s
+This is a low room with a crude note on the wall. The note says,
+"You won't get it up the steps".
+
+There is a large sparkling nugget of gold here!
+> take gold
+Ok.
+> look
+This is a low room with a crude note on the wall. The note says,
+"You won't get it up the steps".
+> n
+You are at one end of a vast hall stretching forward out of sight to
+the west, filled with wisps of white mist that sway to and fro
+almost as if alive.  Rough stone steps lead up to a passage at the
+top of a dome above you.  A wide staircase runs downward into
+the darkness;  a chill wind blows up from below.  There are small
+passages to the north and south, and a small crack leads east.
+> n
+You are in the Hall of the Mountain King, with passages off in all
+directions.
+
+A huge green fierce snake bars the way!
+> s
+You can't get past the snake.
+> e
+You are at one end of a vast hall stretching forward out of sight to
+the west, filled with wisps of white mist that sway to and fro
+almost as if alive.  Rough stone steps lead up to a passage at the
+top of a dome above you.  A wide staircase runs downward into
+the darkness;  a chill wind blows up from below.  There are small
+passages to the north and south, and a small crack leads east.
+> e
+You are in a small chamber to the east of the Hall of Mists.  The
+walls are composed of rough red sandstone.  There is a large, cubical
+chunk of rock in the center of the room.
+
+There is a sword here with its blade plunged deep into the block
+of stone.  The sword is singing quietly to itself.
+> w
+You are at one end of a vast hall stretching forward out of sight to
+the west, filled with wisps of white mist that sway to and fro
+almost as if alive.  Rough stone steps lead up to a passage at the
+top of a dome above you.  A wide staircase runs downward into
+the darkness;  a chill wind blows up from below.  There are small
+passages to the north and south, and a small crack leads east.
+> w
+You are on the east bank of a fissure slicing clear across the hall.
+The mist is quite thick here, and the fissure is too wide to jump.
+
+> wave rod
+A crystalline bridge now spans the fissure.
+> look
+You are on the east bank of a fissure slicing clear across the hall.
+The mist is quite thick here, and the fissure is too wide to jump.
+
+A crystalline bridge now spans the fissure.
+> w
+You are on the west side of the fissure in the Hall of Mists.
+
+A crystalline bridge now spans the fissure.
+There are diamonds here!

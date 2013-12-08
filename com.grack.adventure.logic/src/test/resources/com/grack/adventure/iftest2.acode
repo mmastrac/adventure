@@ -1,0 +1,77 @@
+* Required for compatibility with original FORTRAN version
+VERB EXPLORE,SAY
+VARIABLE HERE,THERE,STATUS,ARG1,ARG2
+DEFINE HERE,THERE,STATUS,ARG1,ARG2
+TEXT     SOK!
+TEXT     BLANK
+
+TEXT     OK!
+         Ok.
+
+* Tests IF statements (chaining)
+VARIABLE X
+
+TEXT   PASS
+       Pass!
+TEXT   FAIL
+       Fail!
+
+INITIAL
+    SET X, 1
+    
+    IFGT X, 0
+        AND
+        NOT
+    IFLT X, 0    
+        SAY PASS
+    ELSE
+        SAY FAIL
+    FIN
+
+    IFLT X, 0 { if x < 0 or not x > 0 fail }
+        OR
+        NOT
+    IFGT X, 0    
+        SAY FAIL
+    ELSE
+        SAY PASS
+    FIN
+    
+    IFGT X, 0
+        AND
+    IFGT X, 0
+        AND
+    IFGT X, 0
+        AND
+        NOT
+    IFLT X, 0    
+        SAY PASS
+    ELSE
+        SAY FAIL
+    FIN
+    
+        
+    IFGT X, 0
+        AND
+    IFGT X, 0
+        AND
+    IFGT X, 0
+        AND
+    IFLT X, 0    
+        SAY FAIL
+    ELSE
+        SAY PASS
+    FIN
+    
+    * Conditionals don't short-circuit
+    IFLT X, 0
+        AND
+    IFLT X, 0
+        AND
+    IFLT X, 0
+        OR
+    IFGT X, 0    
+        SAY PASS
+    ELSE
+        SAY FAIL
+    FIN

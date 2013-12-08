@@ -1,0 +1,20 @@
+Output: 3
+Output: 2
+Output: 1
+Output: 1
+Output: 0
+Output: 2
+Output: 1
+Output: 1
+Output: 2
+Output: 4
+Output: 48
+Output: 2
+Output: 1
+Output: 1
+Output: 2
+There is a message scrawled in the dust in a flowery script, reading:
+"This is not the maze where the pirate leaves his treasure chest."
+
+Yes, it's a turtle
+Yes, it's a turtle

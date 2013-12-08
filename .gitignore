@@ -1,0 +1,6 @@
+com.grack.adventure.logic/target
+com.grack.adventure.web/target
+.DS_Store
+.classpath
+.project
+.settings

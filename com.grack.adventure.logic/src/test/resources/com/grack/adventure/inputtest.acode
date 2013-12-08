@@ -1,0 +1,145 @@
+* Tests input (requires stuffing strings into the input buffer)
+
+* Required for compatibility with original FORTRAN version
+VERB EXPLORE,SAY
+VARIABLE HERE,THERE,STATUS,ARG1,ARG2
+DEFINE HERE,THERE,STATUS,ARG1,ARG2
+TEXT     SOK!
+TEXT     BLANK
+
+TEXT     OK!
+         Ok.
+SYNON    0,MOVED        {set by interpreter if we moved during}
+SYNON    1,QUICKIE     {BRIEF output mode in effect}
+SYNON    2,FASTMODE    {FAST output mode in effect}
+SYNON    3,FULLDISP    {Display full place description}
+SYNON    4,PLS.CLARIFY  {Unsure what you intend, please clarify. }
+SYNON    5,JUGGLED      {set by interpreter if we picked up, }
+
+SYNON    12,BADWORDBIT
+SYNON    13,PLACE
+SYNON    14,VERB
+SYNON    15,OBJECT
+
+SYNON    0,LIT         {Place is self-illuminated}
+SYNON    1,BEENHERE    {We've been here at least once}
+SYNON    9999,BADWORD
+
+SYNON HELMET,HEADCOVER,HARDHAT
+
+* Test starts here
+TEXT BAD.WORD
+     Bad word
+TEXT OUTPUT.IS
+     #
+TEXT GOT.HI
+     Hi!
+TEXT GOT.HI2
+     Hi 2!
+TEXT GOT.HIROAD
+     Hi Road!
+TEXT GOT.YO
+     Yo!
+TEXT GOT.BYE
+     Bye!
+TEXT PASS
+     Pass!
+TEXT FAIL
+     Fail!
+TEXT STATUS.IS
+     STATUS is:
+TEXT ARG1.IS
+     ARG1 is:
+TEXT ARG2.IS
+     ARG2 is:
+TEXT IS.VERB
+     verb
+TEXT IS.OBJECT
+     object
+TEXT IS.PLACE
+     place
+TEXT AT.ROAD
+     At road
+VARIABLE X
+VERB HI,YO
+VERB BYE
+* Place
+PLACE ROAD
+      Road
+AT ROAD
+    SAY AT.ROAD
+    PROCEED
+* Two actions for HI, one for YO
+ACTION YO
+    SAY GOT.YO
+ACTION HI
+    SAY GOT.HI
+ACTION HI
+    SAY GOT.HI2
+ACTION HI ROAD
+    SAY GOT.HIROAD
+ACTION BYE
+    SAY GOT.BYE
+OBJECT HELMET
+      Helmet
+DEFINE ROAD
+    
+REPEAT
+    BIC STATUS, VERB
+    BIC STATUS, OBJECT
+    BIC STATUS, PLACE
+    INPUT
+
+    SAY STATUS.IS
+    VALUE OUTPUT.IS, STATUS
+    BIT  STATUS, VERB
+        SAY IS.VERB
+    FIN
+    BIT  STATUS, OBJECT
+        SAY IS.OBJECT
+    FIN
+    BIT  STATUS, PLACE
+        SAY IS.PLACE
+    FIN
+    BIT STATUS, BADWORDBIT
+        SAY BAD.WORD
+    FIN
+
+    SAY ARG1.IS
+    NAME OUTPUT.IS, ARG1
+    BIT  ARG1, VERB
+        SAY IS.VERB
+    FIN
+    BIT  ARG1, OBJECT
+        SAY IS.OBJECT
+    FIN
+    BIT  ARG1, PLACE
+        SAY IS.PLACE
+    FIN
+    BIT ARG1, BADWORDBIT
+        SAY BAD.WORD
+    FIN
+    IFEQ ARG1, BADWORD
+        SAY BAD.WORD
+    FIN
+
+    IFGT STATUS, 1
+    SAY ARG2.IS
+    NAME OUTPUT.IS, ARG2
+    BIT  ARG2, VERB
+        SAY IS.VERB
+    FIN
+    BIT  ARG2, OBJECT
+        SAY IS.OBJECT
+    FIN
+    BIT  ARG2, PLACE
+        SAY IS.PLACE
+    FIN
+    BIT ARG2, BADWORDBIT
+        SAY BAD.WORD
+    FIN
+    FIN
+
+    CALL ARG1
+    CALL ARG2
+    STOP

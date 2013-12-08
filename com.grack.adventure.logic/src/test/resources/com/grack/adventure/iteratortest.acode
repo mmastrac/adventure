@@ -1,0 +1,55 @@
+* Tests object iteration
+
+* Required for compatibility with original FORTRAN version
+VERB EXPLORE,SAY
+VARIABLE HERE,THERE,STATUS,ARG1,ARG2
+DEFINE HERE,THERE,STATUS,ARG1,ARG2
+TEXT     SOK!
+TEXT     BLANK
+
+TEXT     OK!
+         Ok.
+
+* Test starts here
+TEXT     COUNT
+         Count: #
+TEXT     PASS
+         Pass!
+TEXT   OBJECT.IS
+       Object: #
+OBJECT   HELMET
+         Helmet
+        %There is a gem-encrusted visorless helmet sitting on the floor!
+OBJECT    EGGS
+          Golden eggs
+         %There is a large nest here, full of golden eggs!
+         %The nest of golden eggs has vanished!
+         %Done!
+OBJECT    COINS
+          Rare coins
+         %There are many coins here!
+PLACE     ROAD
+          You're at end of road again.
+         %You are standing at the end of a road before a small brick building.
+          Around you is a forest.  A small stream flows out of the building and
+          down a gully.
+PLACE     FOREST
+          You're in forest.
+         %You are in open forest, with a deep valley to one side.
+VARIABLE X,I
+INITIAL
+    SET X, 0
+    ITOBJ I
+        SAY I
+        NAME OBJECT.IS, I
+        ADD X, 1
+    EOI
+    VALUE COUNT, X
+    SET X, 0
+    ITPLACE I
+    	SAY I
+    	ADD X, 1
+    EOI
+    VALUE COUNT, X
+    SAY PASS
+    STOP
