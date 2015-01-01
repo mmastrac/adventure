@@ -1,3 +1,5 @@
+(function() {
+
 var SCREEN_HEIGHT = 25;
 
 var currentState = null;
@@ -197,7 +199,7 @@ function stateChange(state) {
 
 function refreshOutput() {
 	if (inputting && focused) {
-		$('#output').text('');
+		$('#output').empty();
 		for (var i = 0; i < screen.length; i++) {
 			if (i == SCREEN_HEIGHT - 1) {
 				var line = screen[i] + ' ';
@@ -250,3 +252,6 @@ function setScore(score, total) {
 	$('#score_current').text(score);
 	$('#score_total').text(total);
 }
+
+})();
+
