@@ -161,6 +161,8 @@ html {
 	background-color: transparent;
 	color: white;
 	white-space: pre;
+	text-shadow: 0 0 20px;
+	overflow: visible; /* So text shadow isn't clipped */
 }
 
 #input {
