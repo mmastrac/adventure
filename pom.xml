@@ -47,7 +47,7 @@
 											gwt-maven-plugin
 										</artifactId>
 										<versionRange>
-											[2.8.0,)
+											[2.8.2,)
 										</versionRange>
 										<goals>
 											<goal>resources</goal>

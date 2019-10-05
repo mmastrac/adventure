@@ -181,7 +181,7 @@ public class ACodeParser {
 	}
 
 	private void parseAction(String verb, List<String> lineBuffer) {
-		Iterator<String> it = Splitter.on(CharMatcher.WHITESPACE).trimResults().omitEmptyStrings().split(verb).iterator();
+		Iterator<String> it = Splitter.on(CharMatcher.whitespace()).trimResults().omitEmptyStrings().split(verb).iterator();
 		String actionName = trim(it.next());
 		List<String> keywords = Lists.newArrayList(Iterators.transform(it, new Function<String, String>() {
 			public String apply(String input) {
