@@ -1,4 +1,4 @@
-adventure
+adventure ![](https://github.com/mmastrac/adventure/workflows/Java%20CI/badge.svg)
 =========
 
 Port of the 550 point Colossal Cave Adventure game, originally written by David Platt, to the web.
