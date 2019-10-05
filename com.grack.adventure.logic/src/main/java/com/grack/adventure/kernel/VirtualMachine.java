@@ -1,5 +1,6 @@
 package com.grack.adventure.kernel;
 
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -187,7 +188,7 @@ public class VirtualMachine {
 		for (String keyString : values.keySet()) {
 			int key = Integer.parseInt(keyString) + Entity.ENTITY_ID_START;
 			String vals = values.get(keyString);
-			Iterator<String> it = (vals == null) ? Iterators.<String> emptyIterator() : COMMA_SPLITTER.split(vals).iterator();
+			Iterator<String> it = (vals == null) ?  Collections.<String> emptyIterator() : COMMA_SPLITTER.split(vals).iterator();
 
 			if (!it.hasNext())
 				continue;

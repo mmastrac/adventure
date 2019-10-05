@@ -97,6 +97,10 @@ public class World {
 
 	public RestartableTypeFilteringListIterable<Entity, ObjectEntity> getObjectEntities() {
 		return new RestartableTypeFilteringListIterable<Entity, ObjectEntity>(entities, new Predicate<Entity>() {
+			public boolean test(Entity input) {
+				return input instanceof ObjectEntity;
+			}
+
 			public boolean apply(Entity input) {
 				return input instanceof ObjectEntity;
 			}
@@ -105,6 +109,10 @@ public class World {
 
 	public RestartableTypeFilteringListIterable<Entity, PlaceEntity> getPlaceEntities() {
 		return new RestartableTypeFilteringListIterable<Entity, PlaceEntity>(entities, new Predicate<Entity>() {
+			public boolean test(Entity input) {
+				return input instanceof PlaceEntity;
+			}
+
 			public boolean apply(Entity input) {
 				return input instanceof PlaceEntity;
 			}
