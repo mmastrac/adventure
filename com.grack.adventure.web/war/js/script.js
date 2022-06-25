@@ -163,6 +163,11 @@ function print(string) {
 				log('TRACE', "more... ");
 				screen[SCREEN_HEIGHT - 1] = " --- More ---";
 				more = string.slice(i + 1);
+				// Bug: if we write exactly 25 lines of text, we need something to tell print() that we're still accumulating
+				// text. This isn't ideal, but let's shove a zero-width space here for this to happen.
+				if (!more.length) {
+					more = "\u200B";
+				}
 				refreshOutput();
 				acode.pause();
 				return;
