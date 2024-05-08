@@ -127,35 +127,18 @@ public class ACodeInterface {
 			}
 		};
 
-		RequestBuilder builder = new RequestBuilder(RequestBuilder.GET, "ADVENTURE.ACODE");
-		builder.setCallback(new RequestCallback() {
-			public void onError(Request request, Throwable exception) {
-				stateChange0("ERROR");
-				logError("Unable to fetch source: " + exception.getMessage());
-			}
-
-			public void onResponseReceived(Request request, Response response) {
-				try {
-					program = ACodeParser.parseProgram(response.getText());
-					environment = new WebEnvironment();
-					WorldBuilder kernelStateBuilder = new WorldBuilder(program);
-					world = kernelStateBuilder.getState();
-					interpreter = new Interpreter(environment, world, new VirtualMachine());
-
-					timer.scheduleRepeating(1);
-					stateChange0("RUNNING");
-				} catch (ParseException e) {
-					stateChange0("ERROR");
-					logError("Parse exception: " + e.getMessage());
-				}
-			}
-		});
-
 		try {
-			builder.send();
-		} catch (RequestException e) {
+			program = ACodeParser.parseProgram(file);
+			environment = new WebEnvironment();
+			WorldBuilder kernelStateBuilder = new WorldBuilder(program);
+			world = kernelStateBuilder.getState();
+			interpreter = new Interpreter(environment, world, new VirtualMachine());
+
+			timer.scheduleRepeating(1);
+			stateChange0("RUNNING");
+		} catch (ParseException e) {
 			stateChange0("ERROR");
-			logError("Unable to send request to fetch source: " + e.getMessage());
+			logError("Parse exception: " + e.getMessage());
 		}
 	}
 

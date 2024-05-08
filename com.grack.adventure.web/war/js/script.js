@@ -32,10 +32,34 @@ function restartBlink() {
 	}, 500);
 }
 
-window.ACodeReady = function() {
+window.ACodeReady = async function() {
 	input = $('#input');
 
-	acode = new ACode('ADVENTURE.ACODE', {
+	for (var i = 0; i < SCREEN_HEIGHT; i++)
+		screen.push('');
+
+	// Asynchronously load the script
+	screen[1] = "Loading ADVENTURE.ACODE...";
+	let code;
+	try {
+		let timeout = 100;
+		let repeat;
+		let repeater = () => {
+			screen[1] += '.';
+			timeout *= 2;
+			refreshOutput();
+			repeat = setTimeout(repeater, timeout);
+		}
+		repeater();
+		let wait = new Promise(r => setTimeout(r, 1000));
+		code = (await fetch('ADVENTURE.ACODE')).text();
+		code = (await Promise.all([wait, code]))[1];
+		clearTimeout(repeat);
+	} catch (e) {
+		print("Failed to load ADVENTURE.ACODE!\n");
+	}
+
+	acode = new ACode(code, {
 		print : print,
 		stateChange : stateChange,
 		log : log,
@@ -183,8 +207,6 @@ function print(string) {
 function stateChange(state) {
 	log("TRACE", "State -> " + state);
 	if (currentState == 'LOADING') {
-		for (var i = 0; i < SCREEN_HEIGHT; i++)
-			screen.push('');
 		refreshOutput();
 	} 
 	
