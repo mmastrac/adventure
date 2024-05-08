@@ -41,9 +41,9 @@ window.ACodeReady = async function() {
 	// Asynchronously load the script
 	screen[1] = "Loading ADVENTURE.ACODE...";
 	let code;
+	let repeat;
 	try {
 		let timeout = 100;
-		let repeat;
 		let repeater = () => {
 			screen[1] += '.';
 			timeout *= 2;
@@ -54,9 +54,16 @@ window.ACodeReady = async function() {
 		let wait = new Promise(r => setTimeout(r, 1000));
 		code = (await fetch('ADVENTURE.ACODE')).text();
 		code = (await Promise.all([wait, code]))[1];
-		clearTimeout(repeat);
+		if (!code.includes("XYZZY")) {
+			throw new Error("ACODE file was corrupt");
+		}
 	} catch (e) {
-		print("Failed to load ADVENTURE.ACODE!\n");
+		screen[1] = "Failed to load ADVENTURE.ACODE!";
+		screen[2] = e.message;
+		refreshOutput();
+		return;
+	} finally {
+		clearTimeout(repeat);
 	}
 
 	acode = new ACode(code, {
@@ -206,10 +213,23 @@ function print(string) {
 
 function stateChange(state) {
 	log("TRACE", "State -> " + state);
+
 	if (currentState == 'LOADING') {
 		refreshOutput();
+		setInterval(() => {
+			for (let i = 0; i < 100; i++) {
+				if (currentState == "RUNNING") {
+					acode.step()
+				} else {
+					break;
+				}
+			}
+		}, 1);
 	} 
-	
+
+	if (state == 'RUNNING') {
+	}
+
 	if (state == 'INPUT') {
 		restartBlink();
 		

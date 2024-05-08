@@ -32,6 +32,10 @@ public class Entry implements EntryPoint {
 			this._acode.@com.grack.adventure.web.ACodeInterface::resume()();
 		}
 
+		$wnd.ACode.prototype.step = function() {
+			this._acode.@com.grack.adventure.web.ACodeInterface::step()();
+		}
+
 		if ($wnd.ACodeReady)
 			$wnd.ACodeReady();
 	}-*/;

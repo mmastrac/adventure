@@ -94,39 +94,6 @@ public class ACodeInterface {
 
 		stateChange0("LOADING");
 
-		timer = new Timer() {
-			@Override
-			public void run() {
-				if (!paused) {
-					try {
-						trace0("Running code...");
-						// Run only if the interpreter is running
-						for (int i = 0; i < 100; i++) {
-							InterpreterState state = interpreter.step();
-							if (state == InterpreterState.COMPLETED) {
-								timer.cancel();
-								trace0("Done.");
-								refreshScore();
-								stateChange0("COMPLETED");
-							} else if (state == InterpreterState.WAITING_FOR_INPUT || state == InterpreterState.WAITING_FOR_QUERY) {
-								paused = true;
-								trace0("Need input: " + state);
-								refreshScore();
-								stateChange0("INPUT");
-							}
-
-							if (state != InterpreterState.RUNNING) {
-								trace0("Exiting loop: " + state);
-								return;
-							}
-						}
-					} catch (Throwable t) {
-						trace0("Uh-oh, internal error: " + t.getClass() + " " + t.getMessage());
-					}
-				}
-			}
-		};
-
 		try {
 			program = ACodeParser.parseProgram(file);
 			environment = new WebEnvironment();
@@ -134,7 +101,6 @@ public class ACodeInterface {
 			world = kernelStateBuilder.getState();
 			interpreter = new Interpreter(environment, world, new VirtualMachine());
 
-			timer.scheduleRepeating(1);
 			stateChange0("RUNNING");
 		} catch (ParseException e) {
 			stateChange0("ERROR");
@@ -146,6 +112,7 @@ public class ACodeInterface {
 		trace0("Got input: " + input);
 		environment.setQueuedInput(input);
 		paused = false;
+		stateChange0("RUNNING");
 	}
 
 	private Map<String, String> restore() {
@@ -240,5 +207,21 @@ public class ACodeInterface {
 
 	public void resume() {
 		this.paused = false;
+	}
+
+	public void step() {
+		if (!this.paused) {
+			InterpreterState state = interpreter.step();
+			if (state == InterpreterState.COMPLETED) {
+				trace0("Done.");
+				refreshScore();
+				stateChange0("COMPLETED");
+			} else if (state == InterpreterState.WAITING_FOR_INPUT || state == InterpreterState.WAITING_FOR_QUERY) {
+				paused = true;
+				trace0("Need input: " + state);
+				refreshScore();
+				stateChange0("INPUT");
+			}
+		}
 	}
 }
