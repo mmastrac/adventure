@@ -1,0 +1,711 @@
+no
+
+enter
+get lamp
+xyzzy
+
+on
+get rod
+e
+get
+w
+w
+w
+drop rod
+get bird
+get rod
+w
+look
+d
+s
+get gold
+n
+w
+w
+wave rod
+cross
+w
+e
+get diamonds
+e
+e
+d
+free bird
+drop cage
+invent
+drop rod
+s
+get jewelry
+n
+ne
+get helmet
+out
+w
+get coins
+e
+n
+get silver
+n
+s
+drop axe 
+get silver
+n
+plugh
+off
+drop silver
+drop diamonds
+drop jewels
+drop gold
+invent
+drop helmet
+drop coins
+invent
+plugh
+plover
+ne
+on
+get pyramid
+out
+plover
+plugh
+drop pyramid
+plugh
+s
+s
+get axe
+n
+n
+plugh
+get keys
+get bottle
+get food
+plugh
+s
+s
+invent
+sw
+sw
+sw
+sw
+sw
+sw
+sw
+w
+kill dragon
+y
+get rug
+n
+d
+s
+d
+pour water
+u
+w
+u
+swing axe
+n
+n
+get water
+s
+s
+d
+s
+d
+pour water
+u
+e
+d
+get oil
+u
+w
+d
+climb
+w
+get eggs
+n
+pour oil
+drop bottle
+n
+w
+d
+sw
+u
+throw eggs
+invent
+cross
+ne
+e
+ne
+e
+get spices
+out
+s
+se
+s
+enter
+throw food
+unlock chain
+get chain
+get bear
+drop keys
+invent
+get bear
+out
+w
+n
+w
+w
+cross
+free bear
+w
+cross
+sw
+d
+se
+get vase
+se
+e
+get pillow
+w
+ne
+e
+u
+e
+u
+n
+off
+plugh
+
+drop pillow
+drop vase
+get pillow
+invent
+drop rug
+drop spices
+drop chain
+invent
+plugh
+
+lon
+s
+on
+s
+drop pillow
+invent
+get rod
+nw
+e
+swing axe
+get mushroom
+out
+n
+get vial
+out
+s
+u
+e
+eat mushroom
+get sword
+out
+drop sword
+look
+get sword
+d
+sw
+sw
+sw
+sw
+sw
+sw
+sw
+sw
+w
+get teeth
+n
+d
+s
+d
+climb
+w
+e
+n
+throw sword
+get ring
+n
+e
+e
+ne
+se
+throw vial
+s
+s
+get opals
+n
+n
+w
+sw
+n
+w
+se
+d
+nw
+w
+s
+w
+n
+nw
+w
+w
+s
+s
+get sculpture
+n
+n
+nw
+w
+s
+nw
+nw
+w
+w
+nw
+thurb
+
+invent
+nw
+n
+n
+w
+s
+s
+n
+n
+get trident
+invent
+n
+w
+d
+sw
+u
+cross
+ne
+e
+ne
+e
+out
+n
+wave rod
+cross
+off
+n
+n
+melenkurion
+ne
+on
+n
+nw
+get bracelet
+e
+ne
+get
+out
+throw teeth
+s
+nw
+nw
+n
+off
+s
+d
+on
+get
+n
+drop flask
+open
+open pentagram
+look
+n
+u
+s
+d
+s
+n
+n
+n
+d
+d
+n
+invent
+w
+s
+sw
+nw
+s
+d
+w
+nw
+n
+s
+n
+e
+e
+get
+w
+w
+sw
+e
+se
+ne
+e
+se
+d
+s
+n
+s
+d
+get
+u
+u
+invent
+u
+n
+klaetu
+enter
+drop yacht
+drop jade 
+invent
+drop sceptre
+out
+enter
+drop rod
+out
+enter
+get rod
+out
+close
+s
+d
+d
+d
+get
+u
+u
+u
+s
+s
+s
+off
+s
+s
+s
+on
+s
+w
+w
+crosw
+cross
+sw
+d
+se
+se
+back
+n
+w
+invent
+drop plate
+drop rod
+drop axe
+drop lamp
+drop ring
+invent
+e
+get
+w
+get rod
+get axe
+get plate
+get ring
+look
+get lamp
+nw
+s
+se
+ne
+e
+u
+e
+u
+s
+drop plate
+invent
+drop rod
+drop axe
+n
+n
+plugh
+drop ring
+plugh
+s
+s
+u
+w
+w
+w
+s
+e
+s
+s
+s
+n
+e
+e
+nw
+get chest
+get trident
+get emereald
+get sculpt
+get opals
+look
+get emerald
+se
+n
+d
+e
+e
+off
+xyzzy
+drop sculpt
+drop opals
+drop emerlad
+drop emerald
+drop chest
+invent
+plugh
+on
+s
+s
+get rod
+sw
+w
+n
+d
+s
+e
+drop lamp
+noside samoht
+get lamp
+look
+e
+ne
+e
+n
+open
+d
+d
+get
+u
+u
+u
+u
+wave rod
+e
+n
+n
+sw
+d
+get
+w
+w
+nw
+e
+s
+get
+w
+n
+w
+s
+wave rod
+w
+w
+d
+s
+u
+e
+u
+n
+off
+plugh
+drop trident
+drop spyglass
+drop pieces
+drop pearl
+plugh
+on
+s
+s
+d
+klaetu
+enter
+get jade
+get yacht
+get sceptre
+get crown
+out
+close
+invent
+u
+n
+n
+plugh
+off
+drop yacht
+drop sceptre
+drop crown
+invent
+drop jade
+plugh
+on
+s
+s
+sw
+sw
+sw
+sw
+w
+d
+n
+d
+d
+s
+d
+climb
+w
+fee
+fie
+foe
+foo
+get
+n
+n
+w
+d
+se
+se
+ne
+e
+u
+e
+u
+e
+n
+plugh
+drop eggs
+plugh
+invent
+s
+s
+drop rod
+sw
+w
+n
+d
+s
+d
+climb
+w
+n
+n
+d
+yyes
+hit  gong
+n
+ne
+get
+out
+s
+ride darwin
+s
+score
+no
+s
+d
+back
+s
+e
+e
+n
+n
+plugh
+drop beads
+plugh
+score
+no
+s
+s
+sw
+sw
+sw
+sw
+w
+d
+n
+d
+s
+e
+e
+ne
+e
+e
+get
+e
+drop spelunker
+e
+e
+e
+e
+e
+e
+e
+e
+e
+e
+e
+e
+e
+e
+e
+re
+look
+e
+e
+e
+e
+e
+e
+e
+e
+e
+e
+e
+e
+no
+e
+zorton
+xyzzy
+thurb
+snoeze
+samoht
+plugh
+phuggg
+noside
+melenkurion
+knerl
+klaetu
+foo
+foe
+fie
+fee
+blerbi
+downstream
+downst
+d

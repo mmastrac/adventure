@@ -68,7 +68,7 @@ public class ACodeInterface {
 
 		@Override
 		public int randomInt(int n) {
-			return (int) (Math.random() * n);
+			return randomInt0(n);
 		}
 	}
 
@@ -80,6 +80,7 @@ public class ACodeInterface {
 	private JavaScriptObject logFunction;
 	private JavaScriptObject setScoreFunction;
 	private JavaScriptObject traceFunction;
+	private JavaScriptObject randomIntFunction;
 	protected ACodeProgram program;
 	protected Interpreter interpreter;
 	private Timer timer;
@@ -171,6 +172,7 @@ public class ACodeInterface {
 		this.@com.grack.adventure.web.ACodeInterface::logFunction = callbacks['log'];
 		this.@com.grack.adventure.web.ACodeInterface::setScoreFunction = callbacks['setScore'];
 		this.@com.grack.adventure.web.ACodeInterface::traceFunction = callbacks['trace'];
+		this.@com.grack.adventure.web.ACodeInterface::randomIntFunction = callbacks['randomInt'];
 	}-*/;
 
 	private native void log0(String type, String message) /*-{
@@ -199,6 +201,10 @@ public class ACodeInterface {
 
 	private native void trace0(String msg) /*-{
 		(this.@com.grack.adventure.web.ACodeInterface::traceFunction)(msg);
+	}-*/;
+
+	private native int randomInt0(int max) /*-{
+		return (this.@com.grack.adventure.web.ACodeInterface::randomIntFunction)(max);
 	}-*/;
 
 	public void pause() {

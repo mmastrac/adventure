@@ -74,6 +74,7 @@ window.ACodeReady = async function() {
 		restore : restore,
 		setScore : setScore,
 		trace : trace,
+		randomInt : randomInt,
 	});
 
 	input.focus();
@@ -289,6 +290,10 @@ function log(category, string) {
 
 function trace(string) {
 	log("TRACE-GWT", string);
+}
+
+function randomInt(n) {
+	return ~~(Math.random() * n);
 }
 
 function setScore(score, total) {

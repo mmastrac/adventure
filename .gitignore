@@ -7,3 +7,4 @@ com.grack.adventure.web/war/adventure
 .project
 .settings
 gwt-unitCache
+build/
