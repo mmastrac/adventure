@@ -11,7 +11,13 @@ let window = { parent: { adventure, Math, Date, Error: ErrorStub, document } };
 // __DEV_MODE__
 
 // This stub script is replaced when we build the final package
-adventure.onScriptDownloaded = function(s) { eval(s.join('\n')) };
-const file = Deno.readTextFileSync('com.grack.adventure.web/war/adventure/compilation-mappings.txt').split('\n')[0];
-const script = Deno.readTextFileSync(`com.grack.adventure.web/war/adventure/${file}`);
+adventure.onScriptDownloaded = function (s) {
+  eval(s.join("\n"));
+};
+const file = Deno.readTextFileSync(
+  "com.grack.adventure.web/war/adventure/compilation-mappings.txt",
+).split("\n")[0];
+const script = Deno.readTextFileSync(
+  `com.grack.adventure.web/war/adventure/${file}`,
+);
 eval(script);

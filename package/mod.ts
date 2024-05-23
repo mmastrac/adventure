@@ -1,7 +1,6 @@
 /**
- * @module
  * Creates an engine to run the original 550-point Adventure text-adventure game.
- * 
+ * @module
  * @example
  * ```ts
  * import { Adventure } from "jsr:@mmastrac/adventure";
@@ -20,12 +19,20 @@
 import { ACode } from "./acode.js";
 import { defaultScriptText } from "./script.js";
 
+/**
+ * An instance of the `Adventure` game, which allows you to run the step the current state,
+ * provide input, and read output.
+ */
 export class Adventure {
   #acode: any;
   #state: string = "LOADING";
   #score: number = 0;
   #print: (s: string) => void;
   #console: string = "";
+
+  /**
+   * Create a new `Adventure` game.
+   */
   constructor(
     options: {
       scriptText?: string;
@@ -71,14 +78,22 @@ export class Adventure {
       },
       randomInt: (n: number) => {
         return randomInt_(n);
-      }
+      },
     });
   }
+
+  /**
+   * Provide an input line when requested.
+   */
   input(s: string): void {
     if (this.#state == "INPUT") {
       this.#acode.input(s);
     }
   }
+
+  /**
+   * Step the game, up to a certain number of opcodes.
+   */
   step(max: number = 100): string {
     if (this.#state !== "RUNNING") {
       return this.#state;
@@ -93,6 +108,10 @@ export class Adventure {
     }
     return this.#state;
   }
+
+  /**
+   * Get the player's current score.
+   */
   get score(): number {
     return this.#score;
   }

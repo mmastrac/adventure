@@ -1,9 +1,16 @@
 import { Adventure } from "../mod.ts";
 
 Deno.test(function smoketest() {
-  const inputs: string[] = Deno.readTextFileSync(new URL('./smoketest.txt', import.meta.url)).split('\n');
+  const inputs: string[] = Deno.readTextFileSync(
+    new URL("./smoketest.txt", import.meta.url),
+  ).split("\n");
   let step = 0;
-  let adv = new Adventure({randomInt: (n) => { console.log(step, n); return step % n } });
+  let adv = new Adventure({
+    randomInt: (n) => {
+      console.log(step, n);
+      return step % n;
+    },
+  });
   while (true) {
     if (adv.step() == "INPUT") {
       step = (step + 10) % 100;
