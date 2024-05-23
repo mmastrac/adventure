@@ -1,3 +1,22 @@
+/**
+ * @module
+ * Creates an engine to run the original 550-point Adventure text-adventure game.
+ * 
+ * @example
+ * ```ts
+ * import { Adventure } from "jsr:@mmastrac/adventure";
+ * const adv = new Adventure();
+ * while (true) {
+ *   const state = adv.step();
+ *   if (state == "INPUT") {
+ *     adv.input(prompt(`Score: ${adv.score}/550 >`) || "");
+ *   } else if (state == "COMPLETED") {
+ *     break;
+ *   }
+ * }
+ * ```
+ */
+
 import { ACode } from "./acode.js";
 import { defaultScriptText } from "./script.js";
 

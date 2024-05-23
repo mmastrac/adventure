@@ -11,4 +11,8 @@ Rather than port the game itself, I re-implemented a somewhat generic ACODE inte
 
 The game itself is incredibly difficult and unforgiving. Enjoy!
 
-You can play a pre-compiled version of the game here: http://grack.com/demos/adventure/
+## Playing
+
+Web: You can play a pre-compiled version of the game here: http://grack.com/demos/adventure/
+
+CLI: You can run this from the command-line using `deno run jsr:@mmastrac/adventure` 

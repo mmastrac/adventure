@@ -30,6 +30,7 @@ base64 < com.grack.adventure.web/war/ADVENTURE.ACODE >> build/jsr/script.js
 echo '`);' >> build/jsr/script.js
 
 echo Testing JSR package...
-deno test -A build/jsr/ > /dev/null
+deno test -A build/jsr/ 2>/dev/null > /dev/null
 
+echo
 echo Done\!
